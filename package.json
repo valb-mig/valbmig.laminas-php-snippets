@@ -1,0 +1,25 @@
+{
+  "name": "laminas-php-snippets",
+  "displayName": "Laminas + Php - Snippets",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "valbmig",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "php",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

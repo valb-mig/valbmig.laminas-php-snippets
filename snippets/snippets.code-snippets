@@ -1,0 +1,22 @@
+{
+    "die-dump": {
+		"prefix": "dd",
+		"body": "echo '<pre>';\nvar_dump($${1:variable});\ndie();",
+		"description": "A Simple var_dump and die"
+	},
+	"exists": {
+		"prefix": "issem",
+		"body": "isset($${1:variable}) && !empty($${2:variable}) ? true : false;",
+		"description": "Verifies if a variable exists and have something inside"
+	},
+	"sql-complete": {
+		"prefix": "sqlc",
+		"body": "$$sql = new Sql($this->${1:variable});\n$$select = $$sql->select();\n$$where  = new Where();\n\n//$$where;\n\n$$select->from([''=>''])\n->where($$where);\n\n$$rows = [];\n\n$$rs = $$sql->prepareStatementForSqlObject($$select)->execute();\n\nforeach($$rs as $$ln)\n{\n	$$bar[] = $$ln;\n}\n\nreturn $$rows;\n",
+		"description": "Complete sql construction with laminas"
+	},
+	"sql-mid": {
+		"prefix": "sqlm",
+		"body": "$$sql = new Sql($this->${1:variable});\n$$select = $$sql->select();\n$$where  = new Where();\n\n//$$where;\n\n$$select->from([''=>''])\n->where($$where);\n\nreturn $$sql->prepareStatementForSqlObject($$select)->execute()->current();",
+		"description": "Simple sql construction with laminas"
+	},
+}
