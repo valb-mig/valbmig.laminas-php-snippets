@@ -1,5 +1,5 @@
 {
-    "die-dump": {
+    	"die-dump": {
 		"prefix": "dd",
 		"body": "echo '<pre>';\nvar_dump($${1:variable});\ndie();",
 		"description": "A Simple var_dump and die"
@@ -19,7 +19,7 @@
 		"body": "$$sql = new Sql($this->${1:variable});\n$$select = $$sql->select();\n$$where  = new Where();\n\n//$$where;\n\n$$select->from([''=>''])\n->where($$where);\n\nreturn $$sql->prepareStatementForSqlObject($$select)->execute()->current();",
 		"description": "Simple sql construction with laminas"
 	},
-		"sql-build": {
+	"sql-build": {
 		"prefix": "bsql",
 		"body": "echo $$this->${1:variable}->buildSqlString($$select);\ndie();",
 		"description": "Build sql structure with laminas"
