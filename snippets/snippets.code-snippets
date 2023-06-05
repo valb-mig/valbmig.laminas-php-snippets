@@ -20,7 +20,7 @@
 		"description": "Simple sql construction with laminas"
 	},
 	"sql-build": {
-		"prefix": "bsql",
+		"prefix": "sqlbs",
 		"body": "echo $$this->${1:variable}->buildSqlString($$select);\ndie();",
 		"description": "Build sql structure with laminas"
 	},
