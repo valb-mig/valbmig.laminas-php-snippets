@@ -7,6 +7,11 @@
   "engines": {
     "vscode": "^1.78.0"
   },
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/valb-mig/valbmig.laminas-php-snippets"
+  },
+  "icon": "icon.png",
   "categories": [
     "Snippets"
   ],
