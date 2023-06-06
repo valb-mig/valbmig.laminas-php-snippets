@@ -2,14 +2,14 @@
   "name": "laminas-php-snippets",
   "displayName": "Laminas + Php - Snippets",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "valbmig",
   "engines": {
     "vscode": "^1.78.0"
   },
   "repository": {
-	"type": "git",
-	"url": "https://github.com/valb-mig/valbmig.laminas-php-snippets"
+    "type": "git",
+    "url": "https://github.com/valb-mig/valbmig.laminas-php-snippets"
   },
   "icon": "icon.png",
   "categories": [
