@@ -1,8 +1,28 @@
 {
-    	"die-dump": {
+	"die-dump": {
 		"prefix": "dd",
 		"body": "echo '<pre>';\nvar_dump($${1:variable});\ndie();",
 		"description": "A Simple var_dump and die"
+	},
+	"decode": {
+		"prefix":"decode",
+		"body":"mb_convert_encoding($${1:variable}, 'UTF-8', 'ISO-8859-1')",
+		"description": "Decode your strings with UTF-8"
+	},
+	"php": {
+		"prefix":"php",
+		"body":"<?php\n\n\n\n?>",
+		"description": "Open's php tag"
+	},
+	"ephp": {
+		"prefix":"ephp",
+		"body":"<?= $${1:variable}  ?>",
+		"description": "Open echo php tag"
+	},
+	"cphp": {
+		"prefix":"cphp",
+		"body":"?>\n\n\n\n<?php",
+		"description": "Open closed php tag"
 	},
 	"exists": {
 		"prefix": "issem",
