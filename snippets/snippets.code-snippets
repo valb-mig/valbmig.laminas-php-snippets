@@ -31,12 +31,12 @@
 	},
 	"sql-complete": {
 		"prefix": "sqlc",
-		"body": "$$sql = new Sql($this->${1:variable});\n$$select = $$sql->select();\n$$where  = new Where();\n\n//$$where;\n\n$$select->from([''=>''])\n->where($$where);\n\n$$rows = [];\n\n$$rs = $$sql->prepareStatementForSqlObject($$select)->execute();\n\nforeach($$rs as $$ln)\n{\n	$$bar[] = $$ln;\n}\n\nreturn $$rows;\n",
+		"body": "$$sql = new Sql($this->${1:variable});\n$$select = $$sql->select();\n$$where  = new Where();\n\n//$$where;\n\n$$select->from(['t'=>'table'])\n->where($$where);\n\n$$rows = [];\n\n$$rs = $$sql->prepareStatementForSqlObject($$select)->execute();\n\nforeach($$rs as $$ln)\n{\n	$$bar[] = $$ln;\n}\n\nreturn $$rows;\n",
 		"description": "Complete sql construction with laminas"
 	},
 	"sql-mid": {
 		"prefix": "sqlm",
-		"body": "$$sql = new Sql($this->${1:variable});\n$$select = $$sql->select();\n$$where  = new Where();\n\n//$$where;\n\n$$select->from([''=>''])\n->where($$where);\n\nreturn $$sql->prepareStatementForSqlObject($$select)->execute()->current();",
+		"body": "$$sql = new Sql($this->${1:variable});\n$$select = $$sql->select();\n$$where  = new Where();\n\n//$$where;\n\n$$select->from(['t'=>'table'])\n->where($$where);\n\nreturn $$sql->prepareStatementForSqlObject($$select)->execute()->current();",
 		"description": "Simple sql construction with laminas"
 	},
 	"sql-build": {
@@ -44,4 +44,9 @@
 		"body": "echo $$this->${1:variable}->buildSqlString($$select);\ndie();",
 		"description": "Build sql structure with laminas"
 	},
+	"sql-update":{
+		"prefix": "sqlu",
+		"body": "$$sql = new Sql($$this->${1:variable});\n$$where = new Where();\n\n$$where->equalTo('value','value');\n\n$$update = $$sql->update('table')\n->set([\n	'column' => 'value'\n])\n->where($$where);\n\n$$sql->prepareStatementForSqlObject($$update)->execute();",
+		"description": "Simple update with laminas"
+	}
 }

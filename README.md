@@ -4,7 +4,7 @@
 ## ✅ Os snippets que a extenção atual possui são:
 
 
-### Select completo com o laminas
+### 📌 Select completo com o laminas
 - sqlc 
 ``` 
 $sql    = new Sql($this->$var);
@@ -27,7 +27,7 @@ foreach($rs as $ln)
 
 return $rows;
 ```
-### Select de apenas um campo com o laminas
+### 📌 Select de apenas um campo com o laminas
 - sqlm
 ``` 
 $sql    = new Sql($this->$var);
@@ -42,11 +42,28 @@ $select->from(['t'=>'table'])
 return $sql->prepareStatementForSqlObject($select)->execute()->current();
 ```
 
-### Retorna a string do select com o laminas
+### 📌 Update simples com o laminas
+- sqlu
+``` 
+$sql   = new Sql($this->variable);
+$where = new Where();
+
+$where->equalTo('value','value');
+
+$update = $sql->update('table')
+->set([
+    'column' => 'value'
+])
+->where($where);
+
+$sql->prepareStatementForSqlObject($update)->execute();
+```
+
+### 📌 Retorna a string do select com o laminas
 
 - sqlbs `echo $this->var->buildSqlString($select); die();`
 
-## Outros
+## 📌 Outros
 
 - php  `<?php  ?>`
 - ephp `<?=    ?>`
