@@ -1,7 +1,7 @@
 # 📋 Sobre o projeto
-## O projeto dos `snippets` foi criado com o objetivo de ajudar a todos os devs em php que utilizam do framework <b>Laminas</b>.. o antigo <b>Zend</b>, mas claro que ele não serve apenas para essa galera, o projeto tambem se adequa aqueles que buscam mais agilidade na hora de debugar e escrever seus códigos.
+### O projeto dos `snippets` foi criado com o objetivo de ajudar a todos os devs em php que utilizam do framework <b>Laminas</b>.. o antigo <b>Zend</b>, mas claro que ele não serve apenas para essa galera, o projeto tambem se adequa aqueles que buscam mais agilidade na hora de debugar e escrever seus códigos.
 
-# ✅ Os snippets que a extenção atual possui são:
+## ✅ Os snippets que a extenção atual possui são:
 
 
 ### Select completo com o laminas
