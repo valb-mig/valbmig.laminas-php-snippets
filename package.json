@@ -2,7 +2,7 @@
   "name": "laminas-php-snippets",
   "displayName": "Laminas + Php - Snippets",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "valbmig",
   "engines": {
     "vscode": "^1.78.0"

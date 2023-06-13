@@ -11,3 +11,7 @@
 ## 0.1.0
 
 - 🪿 Stable configuration // Configuração estável
+
+### 0.1.1
+
+- ➕ Add ifsem snippet
