@@ -61,9 +61,17 @@ $sql->prepareStatementForSqlObject($update)->execute();
 
 ### 📌 Retorna a string do select com o laminas
 
-- sqlbs `echo $this->var->buildSqlString($select); die();`
+- sqlbs ```echo $this->var->buildSqlString($select); die();```
 
 ## 📌 Outros
+
+- ifsem
+``` 
+if(isset($foo) && !empty($foo))
+{
+    return $foo;
+}
+```
 
 - php  `<?php  ?>`
 - ephp `<?=    ?>`
