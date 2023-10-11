@@ -22,7 +22,7 @@ $rs = $sql->prepareStatementForSqlObject($select)->execute();
 
 foreach($rs as $ln)
 {
-    $bar[] = $ln;
+    $rows[] = $ln;
 }
 
 return $rows;
@@ -42,6 +42,21 @@ $select->from(['t'=>'table'])
 return $sql->prepareStatementForSqlObject($select)->execute()->current();
 ```
 
+### 📌 Select para verificação de registro, retornando um valor booleano
+- sqlbool
+``` 
+$sql    = new Sql($this->$var);
+$select = $sql->select();
+$where  = new Where();
+
+// $where;
+
+$select->from(['t'=>'table'])
+->where($where);
+
+return $sql->prepareStatementForSqlObject($select)->execute()->count() > 0 ? true : false;
+```
+
 ### 📌 Update simples com o laminas
 - sqlu
 ``` 
@@ -59,9 +74,27 @@ $update = $sql->update('table')
 $sql->prepareStatementForSqlObject($update)->execute();
 ```
 
+### 📌 Create a private function
+- privf
+``` 
+    private function Test()
+    {
+        // code...
+    }
+```
+
+### 📌 Create a public function
+- pubf
+``` 
+    public function Test()
+    {
+        // code...
+    }
+```
+
 ### 📌 Retorna a string do select com o laminas
 
-- sqlbs ```echo $this->var->buildSqlString($select); die();```
+- sqlbs ```echo '<pre>'; var_dump($sql->buildSqlString($select)); die();```
 
 ## 📌 Outros
 
